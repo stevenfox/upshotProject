@@ -18,7 +18,3 @@
   </tbody>
   @endforeach
 </table>
-
-
-
-<div id="fof"></div>

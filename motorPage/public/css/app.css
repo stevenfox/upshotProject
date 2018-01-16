@@ -1,9 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
 
-#fof {
-  width: 30%;
-  background-color: #faa;
-  height: 20px;
+#endofChallenge {
+  border: 1px solid #dfdfdf;
 }
 
 /*!
