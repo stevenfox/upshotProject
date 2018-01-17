@@ -26,7 +26,7 @@
       <div class="tab-pane active" id="motorbikes_add" role="tabpanel">
              <div class="modal-body">
 
-          {{ Form::open(array('url' => '/')) }}
+          {{ Form::open(array('url' => 'inc/')) }}
 
               <div class="form-group">
                   {{ Form::label('text', 'Brand') }}
@@ -55,7 +55,7 @@
           <div class="tab-pane active" id="owners_add" role="tabpanel">
              <div class="modal-body">
 
-          {{ Form::open(array('url' => '/')) }}
+          {{ Form::open(array('url' => 'inc/')) }}
               <div class="form-group">
                   {{ Form::label('Name', 'Name') }}
                   {{ Form::text('Name', null, array('class'=>'form-control', 'placeholder' => 'Steven'))}}

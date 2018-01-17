@@ -1,7 +1,5 @@
 <?php
-use App\Motorbike;
-use App\Owner;
-use App\Http\Controllers\DataController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +11,6 @@ use App\Http\Controllers\DataController;
 |
 */
 
-Route::get('/', function()
-{
-    return View::make('welcome');
+Route::get('/', function () {
+    return view('welcome');
 });
-
- Route::resource('inc', 'DataController');

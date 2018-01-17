@@ -72,11 +72,11 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    Challenge I
+                    Challenge III
                 </div>
 
                 <div class="links">
-                    <a href="/inc">Procceed to the Challenge I -> </a>
+                    <a href="/inc">Procceed to the Challenge III -> </a>
                 </div>
             </div>
         </div>

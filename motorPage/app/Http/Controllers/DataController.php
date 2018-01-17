@@ -19,7 +19,7 @@ class DataController extends Controller {
      */
     public function index()
     {
-        return View('home')
+        return View('inc.home')
         ->with('motorbikes', Motorbike::all())
         ->with('owners', Owner::all());
 
@@ -41,7 +41,7 @@ class DataController extends Controller {
         $validator = Validator::make(Input::all(),$rules);
 
         if($validator->fails()){
-            return Redirect::to('/')
+            return Redirect::to('inc')
                 ->withErrors($validator);
         } else {
             //store
@@ -53,7 +53,7 @@ class DataController extends Controller {
 
             //redirect
             
-            return Redirect::to('/');
+            return Redirect::to('inc');
             }
 
         } else
@@ -77,7 +77,7 @@ class DataController extends Controller {
 
             //redirect
             
-            return Redirect::to('/');
+            return Redirect::to('inc');
         }
     }
 

@@ -1,7 +1,5 @@
 <?php
-use App\Motorbike;
-use App\Owner;
-use App\Http\Controllers\DataController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +17,5 @@ Route::get('/', function()
 });
 
  Route::resource('inc', 'DataController');
+
+ 
