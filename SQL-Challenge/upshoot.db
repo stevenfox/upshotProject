@@ -1,0 +1,104 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:8889
+-- Generation Time: Jan 17, 2018 at 12:56 PM
+-- Server version: 5.6.35
+-- PHP Version: 7.1.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `upshoot`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `motorbikes`
+--
+
+CREATE TABLE `motorbikes` (
+  `id` int(11) NOT NULL,
+  `Brand` varchar(80) DEFAULT NULL,
+  `Colour` varchar(80) DEFAULT NULL,
+  `Model Year` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `motorbikes`
+--
+
+INSERT INTO `motorbikes` (`id`, `Brand`, `Colour`, `Model Year`) VALUES
+(1, 'Yamaha', 'Red', 2004),
+(2, 'Honda', 'Blue', 2007),
+(3, 'Honda', 'Black', 2014),
+(4, 'Suzuki', 'Red', 2009),
+(5, 'Harley-Davidson', 'Black', 2013),
+(6, 'Ducati', 'Red', 2007);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Owners`
+--
+
+CREATE TABLE `Owners` (
+  `Id` int(11) NOT NULL,
+  `Name` varchar(80) NOT NULL,
+  `Motorbike Id` int(11) NOT NULL,
+  `Location` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `Owners`
+--
+
+INSERT INTO `Owners` (`Id`, `Name`, `Motorbike Id`, `Location`) VALUES
+(1, 'Jake', 4, '51.5034722,-0.0922523'),
+(2, 'Paul', 2, '51.5153163,-0.1011231'),
+(3, 'Mark', 1, '51.516758,-0.076783'),
+(4, 'Paul', 3, '51.5153163,-0.1011231');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `motorbikes`
+--
+ALTER TABLE `motorbikes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `Owners`
+--
+ALTER TABLE `Owners`
+  ADD PRIMARY KEY (`Id`),
+  ADD KEY `MotorBike_ID` (`Motorbike Id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `motorbikes`
+--
+ALTER TABLE `motorbikes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `Owners`
+--
+ALTER TABLE `Owners`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `Owners`
+--
+ALTER TABLE `Owners`
+  ADD CONSTRAINT `MotorBike_ID` FOREIGN KEY (`Motorbike Id`) REFERENCES `motorbikes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
