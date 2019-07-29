@@ -1,0 +1,16 @@
+Challenge 1)
+
+SELECT * FROM motorbikes
+
+Challenge 2)
+
+SELECT Colour, COUNT(*) FROM motorbikes GROUP BY Colour
+
+Challenge 3)
+
+SELECT * FROM motorbikes ORDER BY `Model Year`
+
+Challenge 4)
+
+SELECT Owners.Name AS Owners, motorbikes.Brand, motorbikes.Colour, motorbikes.`Model Year` FROM motorbikes LEFT JOIN Owners ON motorbikes.id = Owners.`Motorbike Id`
+
